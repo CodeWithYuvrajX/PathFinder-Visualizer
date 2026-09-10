@@ -51,7 +51,7 @@ export const STORAGE_KEYS = {
   PREFERENCES: 'pathforge.preferences',
 }
 
-export const GITHUB_URL =
+export const GITHUB_URL = 
   import.meta.env.VITE_GITHUB_URL ||
   'https://github.com/CodeWithYuvrajX/PathFinder-Visualizer'
 
