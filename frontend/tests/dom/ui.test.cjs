@@ -52,7 +52,7 @@ async function testRoutes(bundlePath) {
 
   for (const route of routes) {
     const env = createEnvironment(bundlePath, route.path)
-    await wait(1500)
+    await waitFor(() => env.document.getElementById('root').textContent.includes(route.expect))
     const text = env.document.getElementById('root').textContent
     check(`${route.path} renders`, text.includes(route.expect))
     check(`${route.path} is error free`, env.realErrors().length === 0, env.realErrors()[0] ?? '')
@@ -106,7 +106,7 @@ async function testCompare(bundlePath) {
   console.log('\n== compare ==')
   const env = createEnvironment(bundlePath, '/compare')
   const { window, document } = env
-  await wait(1500)
+  await waitFor(() => /No comparison yet/.test(document.body.textContent))
 
   check('empty state before the first run', /No comparison yet/.test(document.body.textContent))
   check(
