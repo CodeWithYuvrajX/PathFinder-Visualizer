@@ -40,7 +40,7 @@ export function Footer() {
             className="mt-4 inline-flex items-center gap-1.5 text-xs text-ink-muted transition-colors hover:text-ink"
           >
             <Github className="h-3.5 w-3.5" aria-hidden />
-            github.com/CodeScribe01/pathfinding-algorithm-visualizer
+            https://github.com/CodeWithYuvrajX/PathFinder-Visualizer
           </a>
         </div>
 
